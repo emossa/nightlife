@@ -1,0 +1,91 @@
+  /* ------------------------------ */
+  /*           TIPOGRAPHY           */
+  /* ------------------------------ */
+  @font-face { font-family: theinhardt; font-style: normal; font-weight: 400; src: url(fonts/Theinhardt-Regular.ttf); }
+  @font-face {font-family: theinhardt; font-style: normal; font-weight: 200; src: url(fonts/Theinhardt-Thin.ttf); }
+
+
+  p,span{font-size: 1.0vw;}
+  a{font-size: 1.5vw;}
+  h1{font-size: 2.5vw;}
+  h2{font-size: 2vw;}
+  h3{font-size: 1.8vw;}
+  h4{font-size: 1.6vw;}
+  h5{font-size: 1.4vw;}
+  h6{font-size: 1.2vw;}
+  a{color:#E5E5E5 }
+
+  /* ------------------------------ */
+  /*          HOLDING PAGE          */
+  /* ------------------------------ */
+  body{font-family: theinhardt;  color: #E5E5E5; margin:0;  background: #000; background-image: url(images/image.png); background-size: cover; background-position: center;  }
+  .container{ padding: 2.5%;padding-bottom: 0; position: relative; height: 100vh;  box-sizing: border-box;}
+  .container__top__left{display: inline-block; float: left; width: 30vw; margin-bottom: 6vw;}
+  .container__top__right{display: inline-block; float: right; text-align: right; font-size: 1.5vw;}
+  .container__top__right p{font-size: 1.5vw; margin-top: 0;}
+  #container__top__left__caption1{font-weight: 400; margin-top: 0; }
+  #container__top__left__caption2{font-weight: 200; margin-bottom: 6vw}
+  .container__logo, .container__social{position: absolute;}
+  .container__social{transform-origin: left; transform: rotate(-90deg); right: -10vw; top: 30vw;}
+  .container__logo{right: 7vw; top: 24vw;}
+  .container__logo img{height: 3vw;}
+
+  .footer{width: 95%; position: fixed; bottom: 0px;}
+  #footer__text1{width: 50%; float: left;}
+  #footer__text2{width: 50%; float: left; text-align: right;}
+
+  /* ------------------------------ */
+  /*           RESPONSIVE           */
+  /* ------------------------------ */
+  @media only screen and (orientation: portrait){
+
+  /* ---------------------------- */
+  /*         TYPOGRAPHY           */
+  /* ---------------------------- */
+  html,body{line-height: 7vw; }
+  span{font-size: 4vw;}
+  p,a{font-size: 4vw;}
+  h1{line-height: 10vw;font-size: 9vw}
+  h2{font-size: 7vw;}
+  h3{font-size: 5vw;}
+  h4{font-size: 4.5vw;}
+  h5{font-size: 3.5vw;}
+  h6{font-size: 3vw;}
+
+  /* ------------------------------ */
+  /*          HOLDING PAGE          */
+  /* ------------------------------ */
+  .container{padding: 5%; padding-bottom: 0;}
+  .container__top{margin-bottom: 310px;}
+  .container__top__left{width: 65vw; margin:0;}
+  .container__top__right{display: none;}
+  .container__logo{position: static;}
+  .container__logo img{ height: 5vh; margin: 1vh 0;}
+  .container__social{top: 60vh; right: -45vw;}
+  .footer{width: 90%}
+  #footer__text1{display: none; float: none;}
+  #footer__text2{width: 100%; float: none; text-align: left;}
+  #footer__text3{font-size: 3vw;}
+  /* to fix the footer in ipad */
+  @media only screen and (max-height: 1500px){
+    .footer{width: 100%; position: static; bottom: 0px;}
+    body{height: 140vh}
+  }
+
+
+}
+/* to fix footer in inspect mode */
+@media only screen and (max-height: 500px){
+  .footer{width: 100%; position: static; bottom: 0px;}
+}
+/* to clear the div when you use float */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
